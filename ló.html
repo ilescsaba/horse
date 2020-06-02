@@ -1,0 +1,23 @@
+<body></body>
+<script>
+document.addEventListener("click",csinaljlovat );
+function csinaljlovat (event) {
+
+    var lo = document.createElement("img");
+    lo.src = "horsetrot.gif";
+    document.body.appendChild(lo);
+    lo.style.position = "absolute";
+    lo.style.top = event.clientY -100;
+    lo.style.left = event.clientX -100;
+
+    lovak.push(lo);
+}
+function mindentmozgat() {
+    for(var i=0; i<lovak.length; i++) {
+        lovak[i].style.left = parseInt(lovak[i].style.left) +3;
+    }
+}
+setInterval (mindentmozgat, 10);
+var lovak = [];
+
+</script>
